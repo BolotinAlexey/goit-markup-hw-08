@@ -11,3 +11,13 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin feature($img-set) {
+  @each $image in $img-set {
+    $index: index($img-set, $index);
+    #{&}:ntn-child#{$index}::before {
+      $url: 'url(../images#{$image}.svg)';
+      background-image: $url;
+    }
+  }
+} ;

@@ -59,18 +59,20 @@
     background-position: center;
     border-radius: 5px;
   }
-  &:nth-child(1):before {
-    background-image: url(../images/antenna.svg);
-  }
-  &:nth-child(2):before {
-    background-image: url(../images/clock.svg);
-  }
-  &:nth-child(3):before {
-    background-image: url(../images/diagram.svg);
-  }
-  &:nth-child(4):before {
-    background-image: url(../images/astronaut.svg);
-  }
+  @include feature($feature-images);
+
+  // &:nth-child(1):before {
+  //   background-image: url(../images/antenna.svg);
+  // }
+  // &:nth-child(2):before {
+  //   background-image: url(../images/clock.svg);
+  // }
+  // &:nth-child(3):before {
+  //   background-image: url(../images/diagram.svg);
+  // }
+  // &:nth-child(4):before {
+  //   background-image: url(../images/astronaut.svg);
+  // }
 }
 
 /* Doing */
