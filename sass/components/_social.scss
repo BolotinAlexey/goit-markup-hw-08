@@ -1,0 +1,27 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+
+  &__icon {
+    --color2: currentColor;
+  }
+}
+
+.social__link {
+  @extend %flex-center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: inherit;
+  transition: color $time-transition $function-transition,
+    background-color $time-transition $function-transition;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+  }
+}

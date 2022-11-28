@@ -1,0 +1,99 @@
+/* filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.filters__btn {
+  cursor: pointer;
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  color: $main-color;
+  box-shadow: none;
+  transition: color $time-transition $function-transition,
+    background-color $time-transition $function-transition,
+    box-shadow $time-transition $function-transition;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $btn-hover-color;
+    box-shadow: 0 8px 8px -8px $secondary-color;
+  }
+}
+
+/* Projects */
+.project-set {
+  margin-top: calc(-1 * #{$offset-projects});
+  margin-left: calc(-1 * #{$offset-projects});
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex-basis: calc(
+    (100% - 2 * #{$padding-container} - #{$offset-projects} * (#{$value-columns} - 1)) / #{$value-columns}
+  );
+  margin-top: $offset-projects;
+  margin-left: $offset-projects;
+
+  box-shadow: 1px 1px $outline-project-color, -1px 1px $outline-project-color;
+  transition: box-shadow $time-transition $function-transition;
+
+  &:hover {
+    box-shadow: 3px 4px 5px 1px $outline-project-color, -3px 0 5px $outline-project-color;
+  }
+
+  &__text {
+    padding: 20px 24px;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $main-color;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.88;
+    color: $secondary-color;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  /* project-overley */
+  &__tumb {
+    position: relative;
+    overflow: hidden;
+  }
+  &__overley {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform $time-transition $function-transition;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $primary-white-color;
+    background-color: $bgcolor-project-overley;
+  }
+  &:hover &__overley {
+    transform: translateY(0);
+  }
+}

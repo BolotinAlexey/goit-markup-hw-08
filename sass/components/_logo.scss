@@ -1,0 +1,15 @@
+.page-header__logo {
+  margin-right: 93px;
+}
+.logo {
+  color: $accent-color;
+  font: 700 26px/1.19 'Raleway', sans-serif;
+}
+
+.logo__insert {
+  color: $head-color;
+
+  &--reverse {
+    color: $primary-white-color;
+  }
+}

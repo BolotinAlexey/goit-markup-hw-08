@@ -1,0 +1,60 @@
+body {
+  font: 400 14px/1.14 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  color: $main-color;
+  background-color: $primary-white-color;
+}
+
+.container {
+  width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding-container;
+  padding-right: $padding-container;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__header {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    /* 42/36=1.166.. */
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  &--pb0 {
+    padding-bottom: 0;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.icon {
+  --color2: currentColor;
+  fill: currentColor;
+}

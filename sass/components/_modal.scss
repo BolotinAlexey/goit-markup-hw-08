@@ -1,0 +1,238 @@
+/*------ Modal ------*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity $time-transition $function-transition;
+
+  background-color: $bgcolor-backdrop;
+}
+
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  & .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: $primary-white-color;
+  transition: transform $time-transition $function-transition,
+    opacity $time-transition $function-transition;
+
+  &__call {
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    inline-size: 1.15;
+  }
+
+  &__content {
+    padding: 40px;
+  }
+}
+
+.btn-cross {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid $bgcolor-backdrop;
+  border-radius: 50%;
+  background-color: $primary-white-color;
+  transition: background-color $time-transition $function-transition,
+    color $time-transition $function-transition;
+
+  &:hover,
+  &:focus {
+    color: $btn-hover-color;
+  }
+}
+
+.btn-off {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  border: 1px solid $bgcolor-backdrop;
+  border-radius: 50%;
+  background-color: $primary-white-color;
+  transition: background-color $time-transition $function-transition,
+    color $time-transition $function-transition;
+
+  &:hover,
+  &:focus {
+    color: $btn-hover-color;
+  }
+
+  &__icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  &--top-right {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+/* form */
+.form {
+  &-box {
+    width: 100%;
+  }
+
+  &__input-box {
+    position: relative;
+    margin-top: 4px;
+  }
+
+  &__icon {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: $main-color;
+    transition: fill $time-transition $function-transition;
+  }
+
+  &__label {
+    color: $secondary-color;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01rem;
+  }
+}
+
+.form__field {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  padding: 0 0 0 42px;
+  border: 1px solid;
+  border-color: $border-form-color;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color $time-transition $function-transition;
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
+
+  &:focus ~ .form__icon {
+    fill: $accent-color;
+  }
+}
+
+/* comment */
+.form__comment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border: 1px solid $border-form-color;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+  transition: border-color $time-transition $function-transition;
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $placeholder-color;
+  }
+}
+
+/* chekbox */
+.checkbox {
+  display: inline-block;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 36px;
+  color: $secondary-color;
+
+  &__icon-box {
+    position: absolute;
+    display: inline-block;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    border: $main-color 2px solid;
+    border-radius: 2px;
+    color: transparent;
+    transition: background-color $time-transition $function-transition,
+      color $time-transition $function-transition;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__text {
+    line-height: 1.7;
+  }
+  &__link {
+    color: $accent-color;
+  }
+}
+
+.checkbox__input {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  &:focus ~ .checkbox__icon-box,
+  &:hover ~ .checkbox__icon-box {
+    border-color: $accent-color;
+  }
+
+  &:checked ~ .checkbox__icon-box {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    color: $primary-white-color;
+  }
+}

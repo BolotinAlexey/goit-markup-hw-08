@@ -1,0 +1,171 @@
+/* Poster */
+.poster {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    $poster-url;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__header {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+
+  &__btn {
+    padding: 10px 32px;
+    margin: 0 auto;
+  }
+}
+/* Features */
+
+.feature {
+  display: flex;
+  gap: 30px;
+
+  &__header {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: uppercase;
+  }
+  &__description {
+    line-height: 1.71;
+    color: $secondary-color;
+  }
+}
+
+.feature__item {
+  flex-basis: 270px;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $bgcolor-team;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 5px;
+  }
+  &:nth-child(1):before {
+    background-image: url(../images/antenna.svg);
+  }
+  &:nth-child(2):before {
+    background-image: url(../images/clock.svg);
+  }
+  &:nth-child(3):before {
+    background-image: url(../images/diagram.svg);
+  }
+  &:nth-child(4):before {
+    background-image: url(../images/astronaut.svg);
+  }
+}
+
+/* Doing */
+
+.doing {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+
+  &__thumb {
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+    width: 370px;
+    height: 294px;
+  }
+
+  &__description {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    padding: 27px 0;
+    color: $primary-white-color;
+    background-color: $bgcolor-doing-description;
+    font-weight: 700;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+/* Team */
+.section__team {
+  line-height: 1.18;
+  background-color: $bgcolor-team;
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+
+  &__card {
+    border-radius: 1%;
+    background-color: $primary-white-color;
+    box-shadow: 1px 2px 5px -2px $secondary-color, -1px 2px 5px -2px $secondary-color;
+  }
+  &__img {
+    display: block;
+    width: 270px;
+    height: 260px;
+  }
+  &__text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  &__header {
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: $secondary-color;
+  }
+  &__social {
+    width: 100%;
+    padding: 16px 32px 0;
+    color: $icons-color;
+  }
+}
+
+/* Clients */
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients__link {
+  @extend %flex-center;
+  width: 170px;
+  height: 92px;
+
+  border-radius: 4px;
+  border: 1px solid $icons-color;
+  color: $icons-color;
+  transition: color $time-transition $function-transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
