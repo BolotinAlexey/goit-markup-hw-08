@@ -3,22 +3,31 @@
 }
 
 .header__box {
-  display: flex;
-  align-items: center;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* navigation */
 .nav {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* site-nav */
 .site-nav {
-  display: flex;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
 
-  &__item + &__item {
-    margin-left: 50px;
+    &__item + &__item {
+      margin-left: 50px;
+    }
   }
 }
 
@@ -58,6 +67,7 @@
 /* contacts-nav */
 .contacts-nav {
   display: flex;
+  display: none;
   gap: 50px;
   margin-left: auto;
 

@@ -12,11 +12,17 @@
   align-items: center;
 }
 
-@mixin feature($img-set) {
+%absolute-centerY {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin feature($class-name, $img-set) {
   @each $image in $img-set {
-    $index: index($img-set, $index);
-    #{&}:ntn-child#{$index}::before {
-      $url: 'url(../images#{$image}.svg)';
+    $idx: index($img-set, $image);
+    #{$class-name}:nth-child(#{$idx})::before {
+      $url: url(../images/#{$image}.svg);
       background-image: $url;
     }
   }

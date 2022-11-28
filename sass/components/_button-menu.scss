@@ -1,0 +1,28 @@
+.button-menu {
+  @extend %absolute-centerY;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #000;
+
+  .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  .icon-burger {
+    display: block;
+  }
+
+  &.is-open .icon-burger {
+    display: none;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+}

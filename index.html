@@ -17,12 +17,42 @@
       <!-- Header -->
       <header class="page-header">
         <div class="container header__box">
+          <!-- button-menu -->
+          <button
+            type="button"
+            class="button-menu"
+            aria-controls="menu-container"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg class="icon" width="40" height="40">
+              <use class="icon-cross js-close-menu" href="./images/icons.svg#close"></use>
+              <use class="icon-burger js-open-menu" href="./images/icons.svg#burger"></use>
+            </svg>
+          </button>
+
+          <!-- <button
+            type="button"
+            class="button-menu"
+            aria-controls="button-menu"
+            arua-expanded="true"
+            data-menu-button
+          >
+            <svg class="icon icon-cross is-open" width="19" height="19">
+              <use href="./images/icons.svg#cross"></use>
+            </svg>
+            <svg class="icon icon-burger" width="24" height="16">
+              <use href="./images/icons.svg#burger"></use>
+            </svg>
+          </button> -->
+
           <!-- Navigation -->
           <nav class="nav">
             <!-- logo -->
             <a class="logo page-header__logo link" href="index.html" lang="en"
               >Web<span class="logo__insert">Studio</span></a
             >
+
             <!-- site-nav -->
             <ul class="site-nav list">
               <li class="site-nav__item">
@@ -521,6 +551,7 @@
         </div>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
