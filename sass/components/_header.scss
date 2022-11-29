@@ -5,7 +5,7 @@
 .header__box {
   position: relative;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $table) {
     display: flex;
     align-items: center;
   }
@@ -13,7 +13,7 @@
 
 /* navigation */
 .nav {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $table) {
     display: flex;
     align-items: center;
   }
@@ -22,7 +22,7 @@
 /* site-nav */
 .site-nav {
   display: none;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $table) {
     display: flex;
 
     &__item + &__item {
@@ -34,6 +34,8 @@
 /* site-nav links */
 .site-nav__link {
   @extend %link;
+  padding-top: 32px;
+  padding-bottom: 32px;
   padding-left: 2px;
   padding-right: 2px;
   color: $main-color;
@@ -66,19 +68,35 @@
 
 /* contacts-nav */
 .contacts-nav {
-  display: flex;
   display: none;
-  gap: 50px;
-  margin-left: auto;
+
+  @media screen and (min-width: $table) {
+    display: block;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $computer) {
+    display: flex;
+    gap: 50px;
+  }
 
   &__item {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: $table) {
+      display: block;
+      padding: 5px 0;
+    }
+    @media screen and (min-width: $computer) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__icon {
-    margin-right: 10px;
-    /* fill: currentColor; */
+    display: none;
+    @media screen and (min-width: $computer) {
+      display: inline-block;
+      margin-right: 10px;
+      /* fill: currentColor; */
+    }
   }
 }
 

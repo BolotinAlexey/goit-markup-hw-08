@@ -1,37 +1,62 @@
 /* Poster */
 .poster {
-  height: 600px;
-  max-width: 1600px;
+  width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     $poster-url;
   background-repeat: no-repeat;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-width: $table) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $computer) {
+    height: 600px;
+    width: 100%;
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   &__header {
     margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $primary-white-color;
+
+    @media screen and (min-width: $computer) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 
   &__btn {
-    padding: 10px 32px;
+    padding: 10px 24px;
     margin: 0 auto;
+    @media screen and (min-width: $computer) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
   }
 }
 /* Features */
 
 .feature {
-  display: flex;
-  gap: 30px;
-
+  @media screen and (min-width: $table) {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
   &__header {
     margin-bottom: 10px;
     font-weight: 700;
@@ -46,7 +71,15 @@
 }
 
 .feature__item {
-  flex-basis: 270px;
+  flex-basis: 100%;
+
+  @media screen and (min-width: $table) {
+    flex-basis: 354px;
+  }
+
+  @media screen and (min-width: $computer) {
+    flex-basis: 270px;
+  }
 
   &::before {
     content: '';
@@ -59,27 +92,37 @@
     background-position: center;
     border-radius: 5px;
   }
-
-  // &:nth-child(1):before {
-  //   background-image: url(../images/antenna.svg);
-  // }
-  // &:nth-child(2):before {
-  //   background-image: url(../images/clock.svg);
-  // }
-  // &:nth-child(3):before {
-  //   background-image: url(../images/diagram.svg);
-  // }
-  // &:nth-child(4):before {
-  //   background-image: url(../images/astronaut.svg);
-  // }
 }
 @include feature('.feature__item', $feature-images);
+// &:nth-child(1):before {
+//   background-image: url(../images/antenna.svg);
+// }
+// &:nth-child(2):before {
+//   background-image: url(../images/clock.svg);
+// }
+// &:nth-child(3):before {
+//   background-image: url(../images/diagram.svg);
+// }
+// &:nth-child(4):before {
+//   background-image: url(../images/astronaut.svg);
+// }
+
 /* Doing */
 
-.doing {
-  display: flex;
-  justify-content: space-between;
+.doing-set {
+  @media screen and (min-width: $table) {
+    display: flex;
+    justify-content: space-between;
+  }
   padding-top: 0;
+}
+
+.doing {
+  display: none;
+  @media screen and (min-width: $computer) {
+    display: block;
+    padding-top: 0;
+  }
 
   &__thumb {
     position: relative;
@@ -112,8 +155,11 @@
   background-color: $bgcolor-team;
 }
 .team {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: $table) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   &__card {
     border-radius: 1%;

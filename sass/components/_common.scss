@@ -6,7 +6,15 @@ body {
 }
 
 .container {
-  width: $container-width;
+  width: $mobile;
+  @media screen and (min-width: $table) {
+    width: $table;
+  }
+
+  @media screen and (min-width: $computer) {
+    width: $computer;
+  }
+
   margin-left: auto;
   margin-right: auto;
   padding-left: $padding-container;
@@ -14,16 +22,26 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: $computer) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__header {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    font-size: 28px;
     font-weight: 700;
-    font-size: 36px;
     /* 42/36=1.166.. */
-    line-height: 1.17;
+    line-height: 1.18;
     text-align: center;
+
+    @media screen and (min-width: $computer) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
   }
 
   &--pb0 {

@@ -25,4 +25,7 @@
   &:hover {
     color: $accent-color;
   }
+  @media screen and (min-width: $table) {
+    display: none;
+  }
 }
