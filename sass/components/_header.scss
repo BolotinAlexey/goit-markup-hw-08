@@ -1,19 +1,19 @@
+.page-header {
+  border-bottom: 1px solid transparent;
+}
+
 .portfolio__page-header {
-  border-bottom: 1px solid $border-header-color;
+  border-color: $border-header-color;
 }
 
 .header__box {
   position: relative;
-
-  @media screen and (min-width: $table) {
-    display: flex;
-    align-items: center;
-  }
+  min-height: 60px;
 }
 
 /* navigation */
 .nav {
-  @media screen and (min-width: $table) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     align-items: center;
   }
@@ -22,11 +22,22 @@
 /* site-nav */
 .site-nav {
   display: none;
-  @media screen and (min-width: $table) {
+
+  &__item {
+    width: max-content;
+    margin-top: 0;
+  }
+
+  &__item ~ &__item {
+    margin-top: 32px;
+  }
+  @media screen and (min-width: $tablet) {
     display: flex;
+    margin-bottom: 0;
 
     &__item + &__item {
       margin-left: 50px;
+      margin-top: 0;
     }
   }
 }
@@ -34,55 +45,63 @@
 /* site-nav links */
 .site-nav__link {
   @extend %link;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 2px;
-  padding-right: 2px;
   color: $main-color;
   transition: color $time-transition $function-transition;
-
   &:hover,
   &:focus {
     color: $accent-color;
   }
+  @media screen and (min-width: $tablet) {
+    padding: 32px 0;
+  }
 }
 
 .site-nav__link--current {
-  position: relative;
-  overflow: hidden;
-  color: $accent-color;
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    overflow: hidden;
+    color: $accent-color;
 
-  &::after {
-    content: '';
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    background-color: $accent-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      background-color: $accent-color;
+    }
   }
 }
 
 /* contacts-nav */
 .contacts-nav {
   display: none;
+  color: $secondary-color;
 
-  @media screen and (min-width: $table) {
-    display: block;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column-reverse;
     margin-left: auto;
+    font-size: 12px;
+    line-height: 1.143;
   }
   @media screen and (min-width: $computer) {
-    display: flex;
+    flex-direction: row-reverse;
     gap: 50px;
+    font-size: inherit;
+    line-height: inherit;
   }
 
   &__item {
-    @media screen and (min-width: $table) {
+    padding: 16px 0;
+
+    @media screen and (min-width: $tablet) {
       display: block;
-      padding: 5px 0;
+      padding: 5px;
     }
     @media screen and (min-width: $computer) {
       display: flex;
@@ -92,10 +111,15 @@
 
   &__icon {
     display: none;
-    @media screen and (min-width: $computer) {
+
+    @media screen and (min-width: $tablet) {
       display: inline-block;
+      margin-right: 8px;
+    }
+
+    @media screen and (min-width: $computer) {
       margin-right: 10px;
-      /* fill: currentColor; */
+      transform: scale(1.143, 1.143);
     }
   }
 }
@@ -103,17 +127,14 @@
 /* contacts-nav links */
 .contacts-nav__link {
   @extend %link;
-  color: $secondary-color;
   display: flex;
   align-items: center;
   transition: color $time-transition $function-transition;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
+  @media screen and (min-width: $tablet) {
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
-}
-.address__link:hover,
-.address__link:focus {
-  color: $accent-color;
 }

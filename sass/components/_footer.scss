@@ -5,9 +5,15 @@
   background-color: $bgcolor-secondary;
 
   &__box {
-    display: flex;
-    align-items: baseline;
+    // padding-left: $padding-container;
+    // padding-right: $padding-container;
+    text-align: center;
+    @media screen and (min-width: $computer) {
+      display: flex;
+      align-items: baseline;
+    }
   }
+
   &__call {
     font-weight: 700;
     margin-bottom: 20px;
@@ -18,25 +24,54 @@
 
 /* address */
 .address {
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) and (max-width: ($computer - 1px)) {
+    display: inline-block;
+  }
+  @media screen and (min-width: $computer) {
+    margin-bottom: 0;
+  }
   &__info {
     margin-top: 20px;
     font-style: normal;
-    line-height: 1.71;
+    line-height: 1.5;
     color: $primary-white-color;
+    @media screen and (min-width: $computer) {
+      line-height: 1.71;
+    }
   }
 
   &__link {
     display: block;
-    margin-top: 9px;
+    margin-top: 8px;
     color: $address-link-color;
     transition: color $time-transition $function-transition;
+    @media screen and (min-width: $computer) {
+      margin-top: 9px;
+    }
   }
+}
+.address__link:hover,
+.address__link:focus {
+  color: $accent-color;
 }
 
 /* Social */
-.social-box {
-  margin-left: 70px;
+.footer__social-box {
+  margin-bottom: 60px;
   color: $primary-white-color;
+
+  @media screen and (min-width: $computer) {
+    margin-left: 70px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: ($computer - 1px)) {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 165px;
+    padding-top: 5px;
+    vertical-align: top;
+  }
 }
 
 .social__link--reverse {
@@ -51,16 +86,24 @@
 
 /* Subscription */
 .sub {
-  margin-left: auto;
-
-  &__box {
-    display: flex;
-    gap: 12px;
+  @media screen and (min-width: $computer) {
+    margin-left: auto;
+  }
+  @media screen and (min-width: $computer) {
+    &__box {
+      display: flex;
+      gap: 12px;
+    }
   }
 
   &__btn {
+    margin: 20px auto 0;
     padding: 10px 28px;
     gap: 10px;
+
+    @media screen and (min-width: $computer) {
+      margin: 0;
+    }
   }
 }
 .sub__input {

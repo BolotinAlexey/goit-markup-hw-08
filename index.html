@@ -31,45 +31,66 @@
             </svg>
           </button>
 
-          <!-- Navigation -->
-          <nav class="nav">
-            <!-- logo -->
-            <a class="logo page-header__logo link" href="index.html" lang="en"
-              >Web<span class="logo__insert">Studio</span></a
-            >
+          <div class="menu-container" data-menu aria-expanded>
+            <!-- Navigation -->
+            <nav class="nav">
+              <!-- logo -->
+              <a class="logo page-header__logo link" href="index.html" lang="en"
+                >Web<span class="logo__insert">Studio</span></a
+              >
 
-            <!-- site-nav -->
-            <ul class="site-nav list">
-              <li class="site-nav__item">
-                <a class="link site-nav__link site-nav__link--current" href="index.html">Студія</a>
+              <!-- site-nav -->
+              <ul class="site-nav list">
+                <li class="site-nav__item">
+                  <a class="link site-nav__link site-nav__link--current" href="index.html"
+                    >Студія</a
+                  >
+                </li>
+                <li class="site-nav__item">
+                  <a class="link site-nav__link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="site-nav__item">
+                  <a class="link site-nav__link" href="">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- contacts-nav -->
+            <ul class="contacts-nav list">
+              <li class="contacts-nav__item">
+                <a class="contacts-nav__link link" href="tel:+380961111111">
+                  <svg class="contacts-nav__icon icon" width="10" height="14">
+                    <use href="./images/icons.svg#smartphone"></use></svg
+                  >+38 096 111 11 11</a
+                >
               </li>
-              <li class="site-nav__item">
-                <a class="link site-nav__link" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="site-nav__item">
-                <a class="link site-nav__link" href="">Контакти</a>
+
+              <li class="contacts-nav__item">
+                <a class="link contacts-nav__link" href="mailto:info@devstudio.com"
+                  ><svg class="contacts-nav__icon icon" width="14" height="10">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
               </li>
             </ul>
-          </nav>
 
-          <!-- contacts-nav -->
-          <ul class="contacts-nav list">
-            <li class="contacts-nav__item">
-              <a class="link contacts-nav__link" href="mailto:info@devstudio.com"
-                ><svg class="contacts-nav__icon icon" width="16" height="12">
-                  <use href="./images/icons.svg#envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts-nav__item">
-              <a class="contacts-nav__link link" href="tel:+380961111111">
-                <svg class="contacts-nav__icon icon" width="10" height="16">
-                  <use href="./images/icons.svg#smartphone"></use></svg
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+            <!-- social-set -->
+            <ul class="list social-set">
+              <li class="social-set__item">
+                <a href="https://www.instagram.com/" class="social-set__link">Instagram</a>
+              </li>
+              <li class="social-set__item">
+                <a href="https://www.twitter.com/" class="social-set__link">Twitter</a>
+              </li>
+              <li class="social-set__item">
+                <a href="https://www.facebook.com/" class="social-set__link">Facebook</a>
+              </li>
+              <li class="social-set__item">
+                <a href="https://www.linkedin.com/" class="social-set__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
 
@@ -123,17 +144,35 @@
             <h2 class="section__header">Чим ми займаємося</h2>
             <ul class="list doing-set">
               <li class="doing__thumb">
-                <img class="doing__img" src="./images/box1.jpg" alt="Програмування" />
+                <img
+                  class="doing__img"
+                  sizes="(min-width: 1200px) 30vw, 0vw"
+                  srcset="./images/box1.jpg 370w, ./images/box1@2x.jpg 740w"
+                  src="./images/box1.jpg"
+                  alt="Програмування"
+                />
                 <p class="doing__description">Десктопні додатки</p>
               </li>
 
               <li class="doing__thumb">
-                <img class="doing__img" src="./images/box2.jpg" alt="Адаптівний дізайн" />
+                <img
+                  class="doing__img"
+                  sizes="(min-width: 1200px) 30vw, 0vw"
+                  srcset="./images/box2.jpg 370w, ./images/box2@2x.jpg 740w"
+                  src="./images/box2.jpg"
+                  alt="Адаптівний дізайн"
+                />
                 <p class="doing__description">Мобільні додатки</p>
               </li>
 
               <li class="doing__thumb">
-                <img class="doing__img" src="./images/box3.jpg" alt="Підбір палітри кольорів" />
+                <img
+                  class="doing__img"
+                  sizes="(min-width: 1200px) 30vw, 0vw"
+                  srcset="./images/box3.jpg 370w, ./images/box3@2x.jpg 740w"
+                  src="./images/box3.jpg"
+                  alt="Підбір палітри кольорів"
+                />
                 <p class="doing__description">Дизайнерські</p>
               </li>
             </ul>
@@ -147,7 +186,17 @@
             <ul class="list team">
               <!-- card 1 -->
               <li class="team__card">
-                <img class="team__img" src="./images/igor.jpg" alt="фото Ігоря Дем'яненко" />
+                <img
+                  class="team__img"
+                  srcset="
+                    ./images/igor.jpg    270w,
+                    ./images/igor@2x.jpg 450w,
+                    ./images/igor@3x.jpg 675w
+                  "
+                  sizes="(min-width: 1200px) 22vw, (min-width: 768px) 49vw, 100vw"
+                  src="./images/igor.jpg"
+                  alt="фото Ігоря Дем'яненко"
+                />
                 <div class="team__text">
                   <h3 class="team__header">Ігор Дем'яненко</h3>
                   <p class="team__description" lang="en">Product Designer</p>
@@ -186,7 +235,17 @@
 
               <!-- card 2 -->
               <li class="team__card">
-                <img class="team__img" src="./images/olga.jpg" alt="фото Ольгі Рєпіной" />
+                <img
+                  class="team__img"
+                  srcset="
+                    ./images/olga.jpg    270w,
+                    ./images/olga@2x.jpg 450w,
+                    ./images/olga@3x.jpg 675w
+                  "
+                  sizes="(min-width: 1200px) 22vw, (min-width: 768px) 49vw, 100vw"
+                  src="./images/olga.jpg"
+                  alt="фото Ольгі Рєпіной"
+                />
                 <div class="team__text">
                   <h3 class="team__header">Ольга Рєпіна</h3>
                   <p class="team__description" lang="en">Frontend Developer</p>
@@ -225,7 +284,17 @@
 
               <!-- card 3 -->
               <li class="team__card">
-                <img class="team__img" src="./images/mykola.jpg" alt="фото Миколи Тарасова" />
+                <img
+                  class="team__img"
+                  srcset="
+                    ./images/mykola.jpg    270w,
+                    ./images/mykola@2x.jpg 450w,
+                    ./images/mykola@3x.jpg 675w
+                  "
+                  src="./images/mykola.jpg"
+                  sizes="(min-width: 1200px) 22vw, (min-width: 768px) 49vw, 100vw"
+                  alt="фото Миколи Тарасова"
+                />
                 <div class="team__text">
                   <h3 class="team__header">Микола Тарасов</h3>
                   <p class="team__description" lang="en">Marketing</p>
@@ -264,7 +333,17 @@
 
               <!-- card 4 -->
               <li class="team__card">
-                <img class="team__img" src="./images/mihailo.jpg" alt="фото Михайло Єрмакова" />
+                <img
+                  class="team__img"
+                  srcset="
+                    ./images/mihailo.jpg    270w,
+                    ./images/mihailo@2x.jpg 450w,
+                    ./images/mihailo@3x.jpg 675w
+                  "
+                  sizes="(min-width: 1200px) 22vw, (min-width: 768px) 49vw, 100vw"
+                  src="./images/mihailo.jpg"
+                  alt="фото Михайло Єрмакова"
+                />
                 <div class="team__text">
                   <h3 class="team__header">Михайло Єрмаков</h3>
                   <p class="team__description" lang="en">UI Designer</p>
@@ -378,7 +457,7 @@
                 </ul>
               </address>
             </div>
-            <div class="social-box">
+            <div class="social-box footer__social-box">
               <p class="footer__call">приєднуйтесь</p>
               <ul class="social list">
                 <li>

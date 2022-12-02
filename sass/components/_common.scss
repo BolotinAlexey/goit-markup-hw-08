@@ -5,10 +5,16 @@ body {
   background-color: $primary-white-color;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: $mobile;
-  @media screen and (min-width: $table) {
-    width: $table;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
   }
 
   @media screen and (min-width: $computer) {
@@ -31,7 +37,7 @@ body {
   }
 
   &__header {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     font-size: 28px;
     font-weight: 700;
     /* 42/36=1.166.. */

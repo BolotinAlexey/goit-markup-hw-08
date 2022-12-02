@@ -1,6 +1,6 @@
 .page-header__logo {
   padding: 16px 0;
-  @media screen and (min-width: $table) {
+  @media screen and (min-width: $tablet) {
     margin-right: 87px;
   }
   @media screen and (min-width: $computer) {
@@ -8,6 +8,7 @@
   }
 }
 .logo {
+  display: block;
   color: $accent-color;
   font: 700 24px/1.17 'Raleway', sans-serif;
 
