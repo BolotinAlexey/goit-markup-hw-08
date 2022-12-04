@@ -40,12 +40,14 @@
 
 .menu-container.is-open {
   @media screen and (max-width: ($tablet - 1px)) {
-    display: block;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
     height: 100vh;
     padding: 48px 40px;
     background-color: $primary-white-color;
@@ -61,7 +63,7 @@
     }
     .contacts-nav {
       display: block;
-      margin-top: 276px;
+      margin-top: 16px;
 
       font-size: 24px;
       line-height: 1.17;

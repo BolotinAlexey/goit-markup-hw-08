@@ -8,6 +8,10 @@
   color: #000;
   z-index: 10;
 
+  &.is-open {
+    position: fixed;
+  }
+
   .icon-cross {
     display: none;
   }

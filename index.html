@@ -56,40 +56,42 @@
             </nav>
 
             <!-- contacts-nav -->
-            <ul class="contacts-nav list">
-              <li class="contacts-nav__item">
-                <a class="contacts-nav__link link" href="tel:+380961111111">
-                  <svg class="contacts-nav__icon icon" width="10" height="14">
-                    <use href="./images/icons.svg#smartphone"></use></svg
-                  >+38 096 111 11 11</a
-                >
-              </li>
+            <div class="menu-conteiner__bottom">
+              <ul class="contacts-nav list">
+                <li class="contacts-nav__item">
+                  <a class="contacts-nav__link link" href="tel:+380961111111">
+                    <svg class="contacts-nav__icon icon" width="10" height="14">
+                      <use href="./images/icons.svg#smartphone"></use></svg
+                    >+38 096 111 11 11</a
+                  >
+                </li>
 
-              <li class="contacts-nav__item">
-                <a class="link contacts-nav__link" href="mailto:info@devstudio.com"
-                  ><svg class="contacts-nav__icon icon" width="14" height="10">
-                    <use href="./images/icons.svg#envelope"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
-              </li>
-            </ul>
+                <li class="contacts-nav__item">
+                  <a class="link contacts-nav__link" href="mailto:info@devstudio.com"
+                    ><svg class="contacts-nav__icon icon" width="14" height="10">
+                      <use href="./images/icons.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
 
-            <!-- social-set -->
-            <ul class="list social-set">
-              <li class="social-set__item">
-                <a href="https://www.instagram.com/" class="social-set__link">Instagram</a>
-              </li>
-              <li class="social-set__item">
-                <a href="https://www.twitter.com/" class="social-set__link">Twitter</a>
-              </li>
-              <li class="social-set__item">
-                <a href="https://www.facebook.com/" class="social-set__link">Facebook</a>
-              </li>
-              <li class="social-set__item">
-                <a href="https://www.linkedin.com/" class="social-set__link">LinkedIn</a>
-              </li>
-            </ul>
+              <!-- social-set -->
+              <ul class="list social-set">
+                <li class="social-set__item">
+                  <a href="https://www.instagram.com/" class="social-set__link">Instagram</a>
+                </li>
+                <li class="social-set__item">
+                  <a href="https://www.twitter.com/" class="social-set__link">Twitter</a>
+                </li>
+                <li class="social-set__item">
+                  <a href="https://www.facebook.com/" class="social-set__link">Facebook</a>
+                </li>
+                <li class="social-set__item">
+                  <a href="https://www.linkedin.com/" class="social-set__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
@@ -495,7 +497,9 @@
                 <label>
                   <p class="footer__call">Підпишіться на розсилку</p>
                   <div class="sub__box">
-                    <input type="email" class="sub__input" name="sub" placeholder="E-mail" />
+                    <div class="input-wrap">
+                      <input type="email" class="sub__input" name="sub" placeholder="E-mail" />
+                    </div>
                     <button type="button" class="btn sub__btn">
                       <span class="btn__text btn__text--to-right4">Підписатися</span>
 

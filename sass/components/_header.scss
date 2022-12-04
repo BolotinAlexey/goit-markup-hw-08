@@ -77,6 +77,11 @@
   }
 }
 
+.menu-conteiner__bottom {
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+  }
+}
 /* contacts-nav */
 .contacts-nav {
   display: none;
