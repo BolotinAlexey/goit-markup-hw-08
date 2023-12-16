@@ -1,9 +1,13 @@
+$hue: 0;
+$saturation: 100%;
+$lightness: 50%;
+
 .page-header {
   border-bottom: 1px solid transparent;
 }
 
 .portfolio__page-header {
-  border-color: $border-header-color;
+  border-color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
 }
 
 .header__box {
@@ -85,7 +89,7 @@
 /* contacts-nav */
 .contacts-nav {
   display: none;
-  color: $secondary-color;
+  color: hsl(0, 100%, 50%);
 
   @media screen and (min-width: $tablet) {
     display: flex;
